@@ -10,10 +10,13 @@ export const Products = () => {
   const productList = useSelector((state) => state.productList);
   const cart = useSelector(state => state.cart)
   const { loading, products } = productList;
+
   const [addLocal, setAddLocal] = useState(false)
   useEffect(() => {
-    listProducts(dispatch);
+    dispatch(listProducts());
   }, [dispatch]);
+
+  console.log(productList);
  
   const handleAddBasket = useCallback(
     (e,id,qty) =>{
