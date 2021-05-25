@@ -8,6 +8,10 @@ export const Product = ({product, handleAddBasket}) => {
     setShowSize(!showSize);
   }, [showSize]);
 
+  const handleCloseSize = useCallback((e) => {
+    setShowSize(false);
+  }, []);
+
   return (
     <div className="card">
       <img
@@ -66,6 +70,9 @@ export const Product = ({product, handleAddBasket}) => {
           </div>
           <button onClick={((e)=>handleAddBasket(e,product.id, qty))} type="submit" className="btn mt-3 w-100 btn-orange">
             Add to basket
+          </button>
+          <button onClick={(e)=>(handleCloseSize(e))} type="button" className="btn mt-3 w-100 btn-orange">
+            Cancel
           </button>
         </form>
       </div>
