@@ -1,0 +1,31 @@
+body {
+  font-family: var(--primary_font_family);
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.btn-orange{
+    background: linear-gradient(116.88deg, #FE3326 -4.28%, #F26E0E 112.69%),
+    linear-gradient(0deg, #59AAF1, #59AAF1);    
+    color: $white-color;        
+  }
